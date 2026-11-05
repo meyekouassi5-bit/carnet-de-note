@@ -325,6 +325,22 @@ main.enter>*:nth-child(n+6){animation-delay:.25s}
 <div id="app"><p>Chargement…</p></div>
 <div id="toasts" role="status" aria-live="polite"></div>
 <script src="config.js"></script>
+  <script>
+document.addEventListener("keydown", function(e) {
+
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    if (e.ctrlKey && 
+       (e.key.toLowerCase() === "u" ||
+        e.key.toLowerCase() === "i" ||
+        e.key.toLowerCase() === "j")) {
+        e.preventDefault();
+    }
+
+});
+</script>
 <script>
 /* =====================================================================
    CARNET DE NOTES — application complète en un seul fichier
